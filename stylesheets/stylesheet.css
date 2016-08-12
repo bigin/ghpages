@@ -2,18 +2,29 @@
   box-sizing: border-box; }
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #606c71; }
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 1em;
+	line-height: 180%;
+	color: #394449;
+}
 
 a {
   color: #1e6bb8;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
+
+.img-container {
+	text-align: center;
+}
+.img-container img {
+	margin: 0 auto;
+}
+
+
 
 .btn {
   display: inline-block;
@@ -54,10 +65,11 @@ a {
       margin-left: 0; } }
 
 .page-header {
-  color: #fff;
-  text-align: center;
-  background-color: #159957;
-  background-image: linear-gradient(120deg, #155799, #159957); }
+	color: #fff;
+	text-align: center;
+	background-color: #2f4248;
+	background-image: linear-gradient(120deg, #2f4248, #3b5157);
+}
 
 @media screen and (min-width: 64em) {
   .page-header {
@@ -108,11 +120,14 @@ a {
   margin-top: 0; }
 .main-content img {
   max-width: 100%; }
+
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: normal;
-  color: #159957; }
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	font-weight: normal;
+	color: #17383e;
+}
+
 .main-content p {
   margin-bottom: 1em; }
 .main-content code {
