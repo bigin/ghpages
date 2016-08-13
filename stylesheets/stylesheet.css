@@ -157,7 +157,8 @@ a {
     background: transparent;
     border: 0; }
 .main-content .highlight {
-  margin-bottom: 1rem; }
+	margin: 1rem 0;
+}
   .main-content .highlight pre {
     margin-bottom: 0;
     word-break: normal; }
