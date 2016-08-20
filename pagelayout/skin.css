@@ -1,25 +1,27 @@
 /* Skin "iSimple" by Renat Rafikov */
 body {
-  background:#f2f2f2;
+	background: #fff;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: 300;
 	line-height: 160%;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	color: #444;
+	/*-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;*/
+	text-align: center;
 }
 
-a { color:#0085c5; }
+a { color: #15a2c5; }
 a:hover { text-decoration:none; }
-a:visited { color:#4a00c5; }
+a:visited { color: #03628e; }
 
 ul li, ol li {
   padding:0 0 0.4em 0;
 }
 
-
 .container {
-  max-width:1300px;
-  margin:0 auto;
+	max-width:740px;
+	margin:0 auto;
+	text-align: left;
 }
 
 .header {
@@ -91,7 +93,7 @@ ul li, ol li {
   padding:15px 0 15px 2%;
 }
 
-.footer {
+#footer {
   padding:1em 3% 3em 3%;
   color:#717171;
   font-size:12px;
@@ -127,7 +129,8 @@ ul li, ol li {
 }
 
 h1 {
-  font-size:22px;
+	font-size: 2em;
+	line-height: 200%;
 }
 h1, h2, h3, h4 {
   font-weight:normal;
@@ -141,7 +144,7 @@ h5, h6 {
   padding:0 0 4px 0;
 }
 
-a.button,
+/*a.button,
 .button {
   border:0;
   text-align:center; 
@@ -182,6 +185,10 @@ a.button:active,
   -webkit-box-shadow:#093950 0px 2px 3px inset;
   -moz-box-shadow:#093950 0px 2px 3px inset;
   box-shadow:#093950 0px 2px 3px inset;
+}*/
+
+p {
+	clear: left;
 }
 
 .table {
@@ -251,6 +258,43 @@ a.button:active,
   border-radius:8px;
 }
 
+
+.iwrap {
+	box-sizing: border-box;
+	padding: 10px;
+	background-color: #efefef;
+	float: left;
+	height: auto;
+	overflow: auto;
+	line-height: 100%;
+	margin-bottom: 40px;
+}
+
+.mark {
+	color: #888;
+	/*background-color: #efefef;
+	padding: 0 3px;*/
+}
+
+.gist-meta {
+	display: none;
+}
+
+.button {
+	display: block;
+	width: 115px;
+	height: 24px;
+	background: #4E9CAF;
+	padding: 8px;
+	text-align: center;
+	border-radius: 5px;
+	color: white;
+	margin: 10px 0;
+	text-decoration: none;
+}
+.button:hover {
+	background: #477a8d;
+}
 
 @media only screen and (max-width:480px) { /* Smartphone custom styles */
 }

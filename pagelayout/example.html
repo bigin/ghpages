@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 template</title>
+	<link rel="stylesheet" href="ex-styles.css">
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body id="home">
+
+<div id="main-wrapper">
+	<h1>Welcome to GetSimple!</h1>
+	<div class="content-wrapper">
+		<div class="content">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu</p>
+			<p><img alt="" src="images/fruits-82524_640.jpg"></p>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+			<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+			<p><img alt="" src="images/cauliflower-1465732_640.jpg"></p>
+			<p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a</p>
+
+		</div>
+	</div>
+	<div class="sidebar">
+		<p><strong>This is the sidebar</strong></p>
+		<p><a href='http://mysite.com'>http://mysite.com</a><br />
+			<a href='http://site.com'>http://site.com</a><br />
+			<a href='http://abc.com'>http://abc.com</a><br />
+			<a href='http://xyz.com'>http://xyz.com</a><br />
+			<a href='http://xxx.com'>http://xxx.com</a></p>
+
+	</div>
+</div>
+
+<script>
+	// Remove chunk from edit page panel and ItemManager edit item view
+	$(function() {
+		if($('body#edit, body#load').length > 0) { $('#main-wrapper').remove(); }
+	});
+</script>
+</body>
+</html>

@@ -8,11 +8,59 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
 </head>
 
 <body>
-	<h1>How To Give Sites Page Based Style</h1>
+	<div class="container">
+		<h1>How to give GetSimple sites page-based style</h1>
+		<p>Normally, the markup for GS sites is defined in themes by (templates) and components, I want to show you an
+			alternative how you can create your page markup and sidebar content a bit more page-based way.</p>
+		<p>You will need following plugins (just download it and install in the order listed bellow):</p>
+		<ol>
+			<li><a href="https://github.com/bigin/ItemManager_2.0">ItemManager</a></li>
+			<li><a href="https://github.com/bigin/ImExtraFields">IMExtraFields</a></li>
+		</ol>
+		<p>After that, create a category, name it as you want (I have named mine <span class="mark">HomeTemplate</span>, as it includes the markup for the home site).
+			You can add as many categories as you want, in my example I only had one category.</p>
+		<p class="iwrap"><img alt="" src="images/create-category.png"></p>
 
+		<p>Go to the <span class="mark">Fields</span> menu and create 3 fields: images, sidebar and markup:</p>
+		<p class="iwrap"><img alt="" src="images/create-fields.png"></p>
 
+		<p>Open <span class="mark">Edit field</span> menu of the Chunk field:</p>
+		<p class="iwrap"><img alt="" src="images/edit-chunk01.png"></p>
+
+		<p>There you can define your markup for the pages that belong to this category:</p>
+		<p class="iwrap"><img alt="" src="images/chunk-default-value.png"></p>
+		<p>In my example I only have very simle markup with main column for the page content and a sidebar, that shows
+		 unique page-based content. Then you put <span class="mark">[[placeholder]]</span> tags where you want dynamic content. For each placeholder
+		 you will have a corresponding field value appearing automaticaly in frontend by a simple ItemManager's template
+		 engine. There is my default chunk value:</p>
+		<code data-gist-id="25ad601d6bb23f86f291428f125d9b39"></code>
+
+		<p>The JavaScript that you see in code is important to ensure to hide the chunk output inside <span class="mark">Page Edit</span> menu.
+			The chunk field value should not be shown there.</p>
+
+		<p>Once you have added the default value to the chunk field, you can now assign an item to the page. Go to the
+			<span class="mark">Pages</span> menu and select a page that you're intending to edit. I use the index page for testing purposes:</p>
+		<p class="iwrap"><img alt="" src="images/index-page-edit.png"></p>
+
+		<p>Ok, let us take a look at the <span class="mark">template.php</span> file, as you can see it has a very complicated structure:</p>
+		<code data-gist-id="8bc914dcf7385011a2fc657efee86939"></code>
+
+		<p>The body contains just a simple <span class="mark">getContent()</span> function call, that we have to create yet.</p>
+		<p>To achieve this, we use the best a <span class="mark">functions.php</span> file:</p>
+		<code data-gist-id="bee6e92ccf49963cfdbb8464bcd54f4b"></code>
+
+		<p>What we are still missing is the styles.css file. If you're working with your own CSS you can skip this section. The style.css looks like this:</p>
+		<code data-gist-id="f3e904097c54ff8db6610ab38883e838"></code>
+
+		<p>That`s it!</p>
+
+		<p>If everything goes well following page should appear on your screen: <a class="button" href="example.html">DEMO</a></p>
+
+		<div id="footer"><p>&copy; 2016 <a href="http://ehret-studio.com">ehret-studio.com</a><p></div>
+	</div>
 </body>
 </html>
