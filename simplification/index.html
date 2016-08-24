@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ItemManager simplify item field accessibility</title>
+	<link rel="stylesheet" href="skin.css">
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>ItemManager Simplify Field Value Access</h1>
+		<h2></h2>
+		<p>I have often seen that some people had issues with accessing the item field values:</p>
+		<code data-gist-id="9854f04bef62e1bbc14a919035837e2a"></code>
+
+		<p>However the accessing an item attribute is generally not a problem for most user:</p>
+		<code data-gist-id="66d262a5174fb79d2e23a1de902d9f8a"></code>
+
+		<p>That is particularly problematic if someone wants to access a complex field types like image- or file-upload.</p>
+		<code data-gist-id="ed81f8e8761ab47fd6667d8e897d9c81"></code>
+
+		<p>This can be prevented with a simple custom <a href="https://sourcemaking.com/design_patterns/decorator">Decorator</a>
+			class. Let's call it <span class="mark">ItemSimplificator</span>. The ItemSimplificator offers additional
+			responsibilities to your Item object dynamically:</p>
+		<code data-gist-id="ae8d1ae5e5f73be4c8ff3f57f24db0e5"></code>
+
+		<p>The <span class="mark">ItemSimplificator</span> class could be placed in the <span class="mark">functions.php</span>
+			file in your theme directory, or you can create any file with this class and include it in your
+			<span class="mark">template.php</span> file.</p>
+
+		<p>You can use the <span class="mark">ItemSimplificator</span> following way:</p>
+		<code data-gist-id="41e0301c88903fadcfc9d1c503b1980e"></code>
+
+		<p>Now, accessing the item field values works exactly the same as when you access the item attributes:</p>
+		<code data-gist-id="fdc985d0d01f5b1db60a5242b2c72608"></code>
+
+		<p>The same also applies with complex fields (file upload, image upload), with the difference that there you'll
+			need to access the object variable which is an array, here's an example:</p>
+		<code data-gist-id="be1d8054afbc9202a489d9089e0286ef"></code>
+
+		<div id="footer"><p>&copy; 2016 <a href="http://ehret-studio.com">ehret-studio.com</a><p></div>
+	</div>
+</body>
+</html>
