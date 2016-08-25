@@ -18,11 +18,11 @@
 		<p>I have often seen that some people had issues with accessing the item field values:</p>
 		<code data-gist-id="9854f04bef62e1bbc14a919035837e2a"></code>
 
-		<p>However the accessing an item attribute is generally not a problem for most user:</p>
-		<code data-gist-id="66d262a5174fb79d2e23a1de902d9f8a"></code>
-
 		<p>That is particularly problematic if someone wants to access a complex field types like image- or file-upload.</p>
 		<code data-gist-id="ed81f8e8761ab47fd6667d8e897d9c81"></code>
+		
+		<p>However the accessing an item attribute is generally not a problem for most user:</p>
+		<code data-gist-id="66d262a5174fb79d2e23a1de902d9f8a"></code>
 
 		<p>This can be prevented with a <a href="https://sourcemaking.com/design_patterns/decorator">Decorator</a>
 			class. Let's call it <span class="mark">ItemSimplificator</span>. The ItemSimplificator offers additional
