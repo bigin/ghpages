@@ -19,16 +19,16 @@
 			the <a href="https://github.com/masterexploder/PHPThumb">PHPThumb</a> library for these purposes.</p>
 
 		<p>Here I'll show you how to use PHPThumb to create your images at any size on the fly. For that we'll add a
-			new function <span class="mark">getResized()</span> to the <span class="mark">functions.php</span> file within the theme folder. </p>
+			new function <span class="mark">getResized()</span> to the <span class="mark">functions.php</span> file within your theme folder. </p>
 		<p>But first of all, the library must be included in the functions.php in order to use PHPThumb functionality:</p>
 		<code data-gist-id="76d72c413a48e46572d20ab0c56256c7"></code>
 
 		<p>Now the getResized() function can be created. Note that when sizing an image, a new copy is created and cached,
 			so that it doesn't have to be re-created every time.</p>
-		<p><em>In this example I use <span class="mark">file-upload</span> field, If you want to use  <span class="mark">image-upload</span>
+		<p>In this example I use <span class="mark">file-upload</span> field, If you want to use  <span class="mark">image-upload</span>
 				instead, you have to change the fied attributes according to the field specifications. More infos about
 				 <span class="mark">image-upload</span> field attributes see under  <span class="mark">Following image-field attributes are accessible</span>:
-				<a href="https://github.com/bigin/ImExtraFields/blob/master/README.md">https://github.com/bigin/ImExtraFields/blob/master/README.md</a></em></p>
+				<a href="https://github.com/bigin/ImExtraFields/blob/master/README.md">https://github.com/bigin/ImExtraFields/blob/master/README.md</a></p>
 		<code data-gist-id="7b411198eaccd670d06ca3029a4e358f"></code>
 		<p>&nbsp;</p>
 		<h2>How can you use the function?</h2>
