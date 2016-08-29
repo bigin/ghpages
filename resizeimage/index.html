@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>ItemManager get thumbnails</title>
+	<link rel="stylesheet" href="skin.css">
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>ItemManager getResized() function</h1>
+		<h2>How to force ItemManager to show thumbnails instead of full size images</h2>
+		<p>Currently, ItemManager does not have its own functionality for manipulating of images and uses
+			the <a href="https://github.com/masterexploder/PHPThumb">PHPThumb</a> library for these purposes.</p>
+
+		<p>Here I'll show you how to use PHPThumb to create your images at any size on the fly. For that we'll add a
+			new function <span class="mark">getResized()</span> to the <span class="mark">functions.php</span> file within the theme folder. </p>
+		<p>But first of all, the library must be included in the functions.php in order to use PHPThumb functionality:</p>
+		<code data-gist-id="76d72c413a48e46572d20ab0c56256c7"></code>
+
+		<p>Now the getResized() function can be created. Note that when sizing an image, a new copy is created and cached,
+			so that it doesn't have to be re-created every time.</p>
+		<p><em>In this example I use <span class="mark">file-upload</span> field, If you want to use  <span class="mark">image-upload</span>
+				instead, you have to change the fied attributes according to the field specifications. More infos about
+				 <span class="mark">image-upload</span> field attributes see under  <span class="mark">Following image-field attributes are accessible</span>:
+				<a href="https://github.com/bigin/ImExtraFields/blob/master/README.md">https://github.com/bigin/ImExtraFields/blob/master/README.md</a></em></p>
+		<code data-gist-id="7b411198eaccd670d06ca3029a4e358f"></code>
+		<p>&nbsp;</p>
+		<h2>How can you use the function?</h2>
+
+		<p>You can call getResized() in your template file with following parameters:</p>
+		<p><img alt="" src="images/getresized.png"></p>
+
+		<ol>
+			<li><span style="color:red">$item->fields->images</span> - [ Item file-upload field ]</li>
+			<li><span style="color:blue">0</span> - [ Image index to resize]</li>
+			<li><span style="color:green">$x</span> - [ Thumbnail width ]</li>
+			<li><span style="color:orange">$y</span> - [ Thumbnail height ]</li>
+		</ol>
+
+
+		<p>Create a new image at width $x, and proportional in height to the original:</p>
+		<code data-gist-id="440c8e390f79e877bc1b8d3f92accc7b"></code>
+
+		<p>Create a new image at width 200px, and proportional in height to the original:</p>
+		<code data-gist-id="b54aa8c9324527e8272610892509a2ab"></code>
+
+		<p>Create a new image at height 200, and proportional in width to the original.</p>
+		<code data-gist-id="88cfcefb90fd4c265e08f2e62fba3f00"></code>
+
+		<p>You can repeat function call as often as you like, in order to display all your image field values:</p>
+		<code data-gist-id="006f7b6c34673f2701eb2262bcb6d8b3"></code>
+		<p>Output:</p>
+		<p class="iwrap"><img alt="" src="images/resizedall.png"></p>
+
+		<p>For more information on usage PHPThumb see also: <a href="https://github.com/masterexploder/PHPThumb/wiki/Basic-Usage">
+			https://github.com/masterexploder/PHPThumb/wiki/Basic-Usage</a></p>
+
+		<div id="footer"><p>&copy; 2016 <a href="http://ehret-studio.com">ehret-studio.com</a><p></div>
+	</div>
+</body>
+</html>
